@@ -1,9 +1,9 @@
-NAME = 
+NAME = Harl
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = 
+SRC = src/Harl.cpp src/main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

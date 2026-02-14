@@ -1,9 +1,9 @@
-NAME = 
+NAME = Sed_is_for_losers
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = 
+SRC = src/main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
