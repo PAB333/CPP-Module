@@ -1,0 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/16 18:21:16 by pibreiss          #+#    #+#             */
+/*   Updated: 2026/02/17 00:02:20 by pibreiss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FIXED_HPP
+#define FIXED_HPP
+
+#include <iostream>
+#include <cmath>
+
+class Fixed
+{
+	public:
+		Fixed(void);
+		Fixed(const int number);
+		Fixed(const float number);
+		Fixed(const Fixed &src);
+		Fixed &operator=(const Fixed &src);
+		~Fixed(void);
+
+		int getRawBits(void) const;
+		void setRawBits(int const raw);
+		float toFloat( void ) const;
+		int toInt( void ) const;
+	private:
+		int	_fixed_point_value;
+		static const int _fractional_bits = 8;
+};
+
+std::ostream &operator<<(std::ostream &out, Fixed const &in);
+
+#endif
