@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 18:15:41 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/12 21:10:05 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:01:41 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ class Contact
 		std::string	get_phonenumber(void) const;
 		std::string	get_darkestsecret(void) const;
 	private:
-		std::string	_first_name;
-		std::string	_last_name;
-		std::string	_nickname;
-		std::string	_phone_number;
-		std::string	_darkest_secret;
+		std::string	_FirstName;
+		std::string	_LastName;
+		std::string	_Nickname;
+		std::string	_PhoneNumber;
+		std::string	_DarkestSecret;
 };
 
 #endif

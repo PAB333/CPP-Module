@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 15:30:20 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/16 18:23:48 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:05:57 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class Fixed
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
 	private:
-		int	_fixed_point_value;
-		static const int _fractional_bits = 8;
+		int	_FixedPointValue;
+		static const int _FractionalBits = 8;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 19:46:51 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/18 17:52:52 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:15:16 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "ScavTrap Default constructor called" << std::endl;
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_HitPoints = 100;
+	this->_EnergyPoints = 50;
+	this->_AttackDamage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap " << _name << " constructor called" << std::endl;
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_HitPoints = 100;
+	this->_EnergyPoints = 50;
+	this->_AttackDamage = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src) : ClapTrap(src)
@@ -48,10 +48,10 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::attack(const std::string& target)
 {
-	if (_energy_points > 0 && _hit_points > 0)
+	if (_EnergyPoints > 0 && _HitPoints > 0)
 	{
-		std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attack_damage << " points of damage!" << std::endl;
-		_energy_points--;
+		std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _AttackDamage << " points of damage!" << std::endl;
+		_EnergyPoints--;
 	}
 	else
 		std::cout << "ScavTrap " << _name << " cannot attacks!" << std::endl;

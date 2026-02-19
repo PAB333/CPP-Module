@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 18:21:16 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/17 00:02:20 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:07:01 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ class Fixed
 		float toFloat( void ) const;
 		int toInt( void ) const;
 	private:
-		int	_fixed_point_value;
-		static const int _fractional_bits = 8;
+		int	_FixedPointValue;
+		static const int _FractionalBits = 8;
 };
 
 std::ostream &operator<<(std::ostream &out, Fixed const &in);

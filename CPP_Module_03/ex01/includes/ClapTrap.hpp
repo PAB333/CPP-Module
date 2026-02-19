@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 19:46:11 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/18 16:55:25 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:12:40 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ class ClapTrap
 		void beRepaired(unsigned int amount);
 	protected:
 		std::string	_name;
-		unsigned int	_hit_points;
-		unsigned int	_energy_points;
-		unsigned int	_attack_damage;
+		unsigned int	_HitPoints;
+		unsigned int	_EnergyPoints;
+		unsigned int	_AttackDamage;
 };
 
 #endif

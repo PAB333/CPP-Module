@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 23:05:54 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/14 00:29:01 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:04:42 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,15 @@ int	main(int argc, char **argv)
 	std::string content = read_file(argv[1]);
 	if (content.empty())
 		return (1);
-	std::string content_edit = find_and_replace_s1(content, s1, s2);
-	std::string	new_filename = std::string(argv[1]) + ".replace";
-	std::ofstream outfile(new_filename.c_str());
+	std::string ContentEdit = find_and_replace_s1(content, s1, s2);
+	std::string	NewFilename = std::string(argv[1]) + ".replace";
+	std::ofstream outfile(NewFilename.c_str());
 	if (!outfile.is_open())
 	{
 		std::cout << "The output file cannot be created" << std::endl;
 		return (1);
 	}
-	outfile << content_edit;
+	outfile << ContentEdit;
 	outfile.close();
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 00:18:33 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/17 15:44:03 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:08:31 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ class Fixed
 		static Fixed& max(Fixed &n1, Fixed &n2);
 		static const Fixed& max(const Fixed &n1, const Fixed &n2);
 	private:
-		int _fixed_point_value;
-		static const int _fractional_bits = 8;
+		int _FixedPointValue;
+		static const int _FractionalBits = 8;
 };
 
 std::ostream &operator<<(std::ostream &out, Fixed const &in);

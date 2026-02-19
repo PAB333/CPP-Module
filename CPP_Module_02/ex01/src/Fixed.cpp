@@ -6,13 +6,13 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 18:21:45 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/17 00:17:26 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:08:07 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Fixed.hpp"
 
-Fixed::Fixed(void): _fixed_point_value(0)
+Fixed::Fixed(void): _FixedPointValue(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
@@ -20,13 +20,13 @@ Fixed::Fixed(void): _fixed_point_value(0)
 Fixed::Fixed(const int number)
 {
 	std::cout << "Int constructor called" << std::endl;
-	this->_fixed_point_value = number << _fractional_bits;
+	this->_FixedPointValue = number << _FractionalBits;
 }
 
 Fixed::Fixed(const float number)
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->_fixed_point_value = roundf(number * (1 << _fractional_bits));
+	this->_FixedPointValue = roundf(number * (1 << _FractionalBits));
 }
 
 Fixed::Fixed(const Fixed &src)
@@ -39,7 +39,7 @@ Fixed &Fixed::operator=(const Fixed &src)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
-		this->_fixed_point_value = src.getRawBits();
+		this->_FixedPointValue = src.getRawBits();
 	return (*this);
 }
 
@@ -50,22 +50,22 @@ Fixed::~Fixed(void)
 
 int	Fixed::getRawBits(void) const
 {
-	return (this->_fixed_point_value);
+	return (this->_FixedPointValue);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	this->_fixed_point_value = raw;
+	this->_FixedPointValue = raw;
 }
 
 float Fixed::toFloat(void) const
 {
-	return ((float)this->_fixed_point_value / (float)(1 << _fractional_bits));
+	return ((float)this->_FixedPointValue / (float)(1 << _FractionalBits));
 }
 
 int	Fixed::toInt(void) const
 {
-	return (this->_fixed_point_value >> _fractional_bits);
+	return (this->_FixedPointValue >> _FractionalBits);
 }
 
 std::ostream &operator<<(std::ostream &out, Fixed const &in)
