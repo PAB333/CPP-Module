@@ -1,18 +1,22 @@
 NAME = BraiiiiiiinnnzzzZ
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinc
 
-SRC = src/main.cpp src/randomChump.cpp src/newZombie.cpp src/Zombie.cpp
-OBJ = $(SRC:.cpp=.o)
+SRCS = src/main.cpp src/randomChump.cpp src/newZombie.cpp src/Zombie.cpp
+
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+
+%.o: %.cpp includes/Zombie.hpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)

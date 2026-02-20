@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 18:16:13 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/12 21:17:35 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/20 01:33:32 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ void	PhoneBook::search_contact(void)
 		std::cout << "PhoneBook is empty" << std::endl;
 		return ;
 	}
-	std::cout << "|   Index  |First Name| Last Name| Nickname |" << std::endl;
-	std::cout << "|----------|----------|----------|----------|" << std::endl;
+	std::cout << "|" << std::setw(10) << "index" << "|" << std::setw(10) << "first name" << "|"
+				<< std::setw(10) << "last name" << "|" << std::setw(10) << "nickname" << "|" << std::endl;
 	for (int i = 0; i < this->_count; i++)
 	{
 		std::cout << "|" << std::setw(10) << i;
