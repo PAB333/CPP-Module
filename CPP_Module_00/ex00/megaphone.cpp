@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 14:49:29 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/02/20 01:16:21 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/02/23 15:36:44 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int ac, char **av)
 		for (int i = 1; i < ac; i++)
 		{
 			for (int j = 0; av[i][j]; j++)
-				std::cout << (char)toupper(av[i][j]);
+				std::cout << (char)std::toupper(av[i][j]);
 		}
 		std::cout << std::endl;
 	}
