@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 20:45:07 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/04/14 00:04:05 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/04/14 21:57:57 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ class Bureaucrat
 		int					_grade;
 };
 
-std::ostream& operator<<(std::ostream& o, const Bureaucrat& src);
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& src);
 
 #endif

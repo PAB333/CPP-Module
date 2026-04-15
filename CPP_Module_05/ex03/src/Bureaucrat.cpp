@@ -6,11 +6,25 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 20:55:32 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/04/14 21:58:29 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/04/15 00:23:51 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
+#include "../includes/AForm.hpp"
+
+void Bureaucrat::signForm(AForm& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->_name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception& e)
+	{
+		std::cout << this->_name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+}
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
@@ -70,6 +84,19 @@ void	Bureaucrat::decrementGrade()
 	if (_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	_grade++;
+}
+
+void	Bureaucrat::executeForm(AForm const & form) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->_name << " executed " << form.getName() << std::endl;
+	}
+	catch (std::exception& exception)
+	{
+		std::cout << this->_name << " couldn't execute " << form.getName() << " because " << exception.what() << std::endl;
+	}
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()

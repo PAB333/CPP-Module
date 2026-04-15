@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 23:26:50 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/04/14 14:27:16 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/04/14 21:57:49 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,9 @@ const char* Form::GradeTooLowException::what() const throw()
 	return ("Form grade is too low");
 }
 
-std::ostream& operator<<(std::ostream& o, const Form& src)
+std::ostream& operator<<(std::ostream& out, const Form& src)
 {
-	o << "Form: " << src.getName() << ", Status: " << (src.getIsSigned() ? "Signed" : "Not signed")
+	out << "Form: " << src.getName() << ", Status: " << (src.getIsSigned() ? "Signed" : "Not signed")
 		<< ", Grade required to sign: " << src.getGradeSign() << ", Grade required to execute: " << src.getGradeExecute();
-	return o;
+	return out;
 }

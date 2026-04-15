@@ -1,9 +1,9 @@
-NAME = 
+NAME = Forms
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinc
 
-SRCS = 
+SRCS = src/AForm.cpp src/Bureaucrat.cpp src/PresidentialPardonForm.cpp src/RobotomyRequestForm.cpp src/ShrubberyCreationForm.cpp src/main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
