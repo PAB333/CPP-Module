@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 22:05:17 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/04/15 01:00:48 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/04/16 23:44:45 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void	RobotomyRequestForm::executeAction() const
 {
-	int	random_value = rand();
+	int	random_value = std::rand();
 	std::cout << "*drilling noises*" << std::endl;
 	if (random_value % 2 == 0)
 		std::cout << this->_target << " has been robotomized successfully" << std::endl;

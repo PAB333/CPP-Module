@@ -6,18 +6,18 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 22:00:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/04/15 16:23:37 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/04/16 23:49:23 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
 #include "../includes/Intern.hpp"
 #include <stdlib.h>
-#include <time.h>
+#include <ctime>
 
 int	main()
 {
-	srand(time(NULL));
+	std::srand(std::time(NULL));
 	Bureaucrat	lvl1("level1", 1);
 	Intern		Intern1;
 	AForm*		form1;

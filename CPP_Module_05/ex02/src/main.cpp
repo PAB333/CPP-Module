@@ -6,7 +6,7 @@
 /*   By: pibreiss <pibreiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 22:00:48 by pibreiss          #+#    #+#             */
-/*   Updated: 2026/04/15 00:20:39 by pibreiss         ###   ########.fr       */
+/*   Updated: 2026/04/16 23:49:00 by pibreiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 #include "../includes/RobotomyRequestForm.hpp"
 #include "../includes/ShrubberyCreationForm.hpp"
 #include <stdlib.h>
-#include <time.h>
+#include <ctime>
 
 int	main()
 {
-	srand(time(NULL));
+	std::srand(std::time(NULL));
 	Bureaucrat	lvl1("level1", 1);
 	Bureaucrat	lvl150("level150", 150);
 
